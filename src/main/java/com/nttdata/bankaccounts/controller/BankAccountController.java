@@ -19,7 +19,7 @@ public class BankAccountController {
     BankAccountService bankAccountService;
 
     @GetMapping
-    public Flux<BankAccount> getCustomers(){
+    public Flux<BankAccount> getBankAccounts(){
         log.info("Listing all BankAccounts: ");
         return bankAccountService.listBankAccounts();
     }
@@ -43,9 +43,9 @@ public class BankAccountController {
     }
 
     @PutMapping("/update")
-    public Mono<BankAccount> updateBankAccount(@RequestBody BankAccount customer){
-        log.info("Updating the following Id: "+customer.getId());
-        return bankAccountService.updateBankAccount(customer);
+    public Mono<BankAccount> updateBankAccount(@RequestBody BankAccount bankAccount){
+        log.info("Updating the following Id: "+bankAccount.getId());
+        return bankAccountService.updateBankAccount(bankAccount);
     }
 
     @DeleteMapping("/delete/{id}")
