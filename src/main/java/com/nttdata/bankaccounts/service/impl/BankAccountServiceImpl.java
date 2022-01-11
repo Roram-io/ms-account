@@ -25,7 +25,7 @@ public class BankAccountServiceImpl implements BankAccountService {
     }
 
     @Override
-    public Mono<BankAccount> listByHolder(String id){
+    public Flux<BankAccount> listByHolder(String id){
         log.info("Calling repository for Find by Holder "+id);
         return bankAccountRepository.findBankAccountByHolder(id);
     }

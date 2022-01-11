@@ -31,7 +31,7 @@ public class BankAccountController {
     }
 
     @GetMapping("/holder/{id}")
-    public Mono<BankAccount> getBankAccountByHolder(@PathVariable("id") String id){
+    public Flux<BankAccount> getBankAccountByHolder(@PathVariable("id") String id){
         log.info("Searching BankAccount with holder with Id "+id);
         return bankAccountService.listByHolder(id);
     }

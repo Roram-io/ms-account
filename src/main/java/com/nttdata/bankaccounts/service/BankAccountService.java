@@ -10,7 +10,7 @@ public interface BankAccountService {
 
     Mono<BankAccount> listById(String id);
 
-    Mono<BankAccount> listByHolder(String id);
+    Flux<BankAccount> listByHolder(String id);
 
     Mono<Void> removeBankAccount(String id);
 
