@@ -24,7 +24,5 @@ public class BankAccount {
     private double amount;
     private int transactionLimit;
 
-    private ArrayList<String> holders;
-
-    
+    private ArrayList<String> allowedHolders;
 }
