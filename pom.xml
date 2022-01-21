@@ -22,6 +22,8 @@
 			<jacoco.plugin.version>0.8.6</jacoco.plugin.version>
 			<spotbugs.plugin.version>4.2.0</spotbugs.plugin.version>
 			<maven-site.plugin.version>3.9.1</maven-site.plugin.version>
+			<sonar.organization>roram-io</sonar.organization>
+			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 		</properties>
 	<dependencies>
