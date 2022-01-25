@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nttdata</groupId>
-	<artifactId>bankaccounts</artifactId>
+	<artifactId>ms-account</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bankaccounts</name>
 	<description>Bank accounts for customers week 1 project</description>
