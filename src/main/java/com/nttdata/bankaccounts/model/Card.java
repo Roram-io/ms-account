@@ -14,19 +14,12 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @ToString
-@Document(collection = "BankAccount")
-public class BankAccount {
+
+public class Card {
     private String type;
+    private String id;
+    private String ownerId;
 
-    @Id
-    private String id= UUID.randomUUID().toString();
-    private String holder;
-
-    private double amount;
-
-    private int transactionLimit;
-    private int freeLimit;
-    private double fee;
-
-    private ArrayList<String> allowedHolders;
+    private String mainAccount;
+    private ArrayList<String> extraAccounts;
 }

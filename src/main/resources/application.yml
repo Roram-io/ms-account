@@ -9,3 +9,6 @@ spring:
       password: nttdatacorazon
   config:
     import: optional:configserver:http://localhost:8888
+  endpoins:
+    url:
+      cardAddress: http://localhost:8885
