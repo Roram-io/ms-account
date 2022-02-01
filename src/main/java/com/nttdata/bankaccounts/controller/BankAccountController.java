@@ -54,5 +54,10 @@ public class BankAccountController {
         return bankAccountService.removeBankAccount(id);
     }
 
+    @PostMapping("/singleMove")
+    public Mono<BankAccount> getAccount(@RequestParam("id") String id, @RequestParam("amount") double amount){
+        return bankAccountService.singleMove(id,amount);
+    }
+
 
 }

@@ -17,4 +17,6 @@ public interface BankAccountService {
     Mono<BankAccount> saveBankAccount(BankAccount bankAccount);
 
     Mono<BankAccount> updateBankAccount(BankAccount bankAccount);
+
+    Mono<BankAccount> singleMove(String id, double amount);
 }

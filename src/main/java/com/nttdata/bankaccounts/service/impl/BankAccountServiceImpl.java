@@ -50,6 +50,17 @@ public class BankAccountServiceImpl implements BankAccountService {
     }
 
     @Override
+    public Mono<BankAccount> singleMove(String id, double amount){
+        return bankAccountRepository.findById(id).switchIfEmpty(Mono.empty())
+                .flatMap(e -> {
+                    if (amount < 0 && e.getAmount()>amount){
+                        return bankAccountRepository.save(e);
+                    }
+                    else return Mono.empty();
+                });
+    }
+
+    @Override
     public Mono<BankAccount> saveBankAccount(BankAccount bankAccount) {
         log.info("Calling repository for inserting Bank Account "+bankAccount.getId());
         log.info("Bank Account of type "+bankAccount.getType());
